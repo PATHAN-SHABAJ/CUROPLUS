@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #0F766E;
+    --primary-hover: #0D9488;
+    --bg-mint: #F0FDFA;
+    --text-slate: #1E293B;
+  }
+
+  body {
+    background-color: var(--bg-mint);
+    color: var(--text-slate);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Utilities & Animations */
+.bg-mint {
+  background-color: #F0FDFA;
+}
+
+.text-teal-brand {
+  color: #0F766E;
+}
+
+.bg-teal-brand {
+  background-color: #0F766E;
+}
+
+.border-teal-brand {
+  border-color: #0F766E;
+}
+
+.gradient-teal {
+  background: linear-gradient(135deg, #0F766E 0%, #0D9488 50%, #06B6D4 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(204, 251, 241, 0.8);
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 30px -5px rgba(15, 118, 110, 0.08);
+}
+
+.shadow-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shadow-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -5px rgba(15, 118, 110, 0.15);
+}
+
+@keyframes pulse-subtle {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.92;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s infinite ease-in-out;
+}
